@@ -3,6 +3,9 @@ const sharedConfig = {
     migrations: {
         directory: './data/migrations/migrations.js'
     },
+    seeds: {
+        directory: './data/seeds'
+    },
     useNullAsDefault: true,
     pool: {
         afterCreate: (conn,done) => conn.run('PRAGMA foreign_keys = ON', done)
@@ -14,9 +17,6 @@ module.exports = {
         ...sharedConfig,
         connection: { filename: 
             './data/cook_book.db3'
-        },
-        seed: {
-            directory: './data/seeds'
         }
     },
     testing: {

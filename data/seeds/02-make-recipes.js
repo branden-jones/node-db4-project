@@ -36,6 +36,7 @@ const steps = [
     { step_text: "Add Salmon and Parmesan", step_number: 2, recipe_id: 3 },
     { step_text: "Bake at 350", step_number: 3, recipe_id: 3 },
 ]
+
 exports.seed = async function (knex) {
     await knex('recipes').insert(recipes)
     await knex('ingredients').insert(ingredients)
